@@ -5,7 +5,7 @@ locals {
     for k1, v1 in var.hpc_caches : {
       for k2, v2 in coalesce(v1.hpc_cache_access_policies, {}) :
       "${k1}/${k2}" => merge(v2, {
-        hpc_cache_id = module.hpc_caches.hpc_caches["${k1}"].id
+        hpc_cache_id = module.hpc_caches.hpc_caches_id["${k1}"]
       })
     }
   ]...)
