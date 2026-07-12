@@ -1,4 +1,9 @@
 # --- azurerm_hpc_cache ---
+output "hpc_caches_id" {
+  description = "Map of id values across all hpc_caches, keyed the same as var.hpc_caches"
+  value       = module.hpc_caches.hpc_caches_id
+}
+
 output "hpc_caches_automatically_rotate_key_to_latest_enabled" {
   description = "Map of automatically_rotate_key_to_latest_enabled values across all hpc_caches, keyed the same as var.hpc_caches"
   value       = module.hpc_caches.hpc_caches_automatically_rotate_key_to_latest_enabled
@@ -92,6 +97,11 @@ output "hpc_caches_tags" {
 }
 
 # --- azurerm_hpc_cache_access_policy ---
+output "hpc_cache_access_policies_id" {
+  description = "Map of id values across all hpc_cache_access_policies, keyed the same as var.hpc_cache_access_policies"
+  value       = module.hpc_cache_access_policies.hpc_cache_access_policies_id
+}
+
 output "hpc_cache_access_policies_access_rule" {
   description = "Map of access_rule values across all hpc_cache_access_policies, keyed the same as var.hpc_cache_access_policies"
   value       = module.hpc_cache_access_policies.hpc_cache_access_policies_access_rule
